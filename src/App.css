@@ -1,38 +1,65 @@
+body{
+  background-color: #f5f6fa;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input{
+  background: none;
+  border: 2px solid black;
+  width: 70vw;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus{
+  box-shadow: 5px 5px 5px white;
+}
+.Market{
+  width: 100%;
+}
+.Item{
+  padding: 10px;
+  border: #dcdde1 1px solid;
+}
+.available{
+  border: #dcdde1 1px solid;
+}
+.buyButton{
+  border: none;
+  background:linear-gradient(to bottom, white 1%, #EE5A24 100%);
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+}
+.buyButton:hover{
+	background:linear-gradient(to bottom, #EE5A24 1%, white 100%);
+}
+ul {
+  list-style-type: none;
+}
+.title{
+  color: #e84118;
+  font-size: 30px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.g{
+  color: #3742fa;
+}
+.r{
+  color: #6ab04c;
+}
+.o{
+  color: #fbc531;
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  grid-gap: 3px;
 }

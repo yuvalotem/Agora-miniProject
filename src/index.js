@@ -5,15 +5,16 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Item  from './stores/Item'
 import Inventory from './stores/Inventory'
+import { Provider } from 'mobx-react';
 
 const newInventory = new Inventory()
 const newItem = new Item('car')
 newInventory.items.push(newItem)
-
+const stores = {newInventory}
 ReactDOM.render(
-  <React.StrictMode>
-    <App store={newInventory}/>
-  </React.StrictMode>,
+  <Provider {...stores}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 

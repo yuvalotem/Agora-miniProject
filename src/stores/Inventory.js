@@ -1,9 +1,11 @@
-import { action, observable } from 'mobx'
+import { action, computed, observable } from 'mobx'
 import Item from './Item'
 
 class Inventory {
     @observable items = []
-
+    @computed get numItems(){
+        return this.items.length
+    }
     @action addItem = (name) =>{
         if(!this.items.some(i => i.name === name)){
         const newItem = new Item(name)
