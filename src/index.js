@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Item  from './stores/Item'
+import Inventory from './stores/Inventory'
+
+const newInventory = new Inventory()
+const newItem = new Item('car')
+newInventory.items.push(newItem)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store={newInventory}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
